@@ -23,7 +23,7 @@ const translations = {
     navPro: "Je suis professionnel",
     navClient: "Je cherche de l'aide",
     heroBadge: "Aide à la personne de confiance au Maroc",
-    heroTitle: "La mise en relation entre familles et professionnels du soin",
+    heroTitle: "Rapprocher les familles et les professionnels du soin",
     heroSubtitle: "Fermlya rassemble les demandes des familles qui cherchent un accompagnement à domicile (garde-malade, soins infirmiers) et celles des professionnels de l'aide à la personne et de la santé.",
     heroCtaClient: "Je cherche de l'aide",
     heroCtaPro: "Je suis professionnel",
