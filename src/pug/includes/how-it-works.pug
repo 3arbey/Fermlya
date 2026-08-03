@@ -1,0 +1,39 @@
+section.how-it-works-section#how-it-works
+  .container
+    h2.section-title.text-center(data-i18n="howTitle") Comment ça marche
+
+    .steps-grid
+      .step-item
+        .step-icon-box
+          svg.lucide-clipboard-list(xmlns="http://www.w3.org/2000/svg", width="22", height="22", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            rect(width="8", height="4", x="8", y="2", rx="1", ry="1")
+            path(d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2")
+            path(d="M12 11h4")
+            path(d="M12 16h4")
+            path(d="M8 11h.01")
+            path(d="M8 16h.01")
+        h3.step-title(data-i18n="step1Title") 1. Déposez votre demande
+        p.step-desc(data-i18n="step1Desc") Familles et professionnels remplissent un court formulaire d'adhésion en ligne.
+
+      .step-item
+        .step-icon-box
+          svg.lucide-heart-handshake(xmlns="http://www.w3.org/2000/svg", width="22", height="22", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            path(d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762")
+        h3.step-title(data-i18n="step2Title") 2. Nous étudions les demandes
+        p.step-desc(data-i18n="step2Desc") Chaque demande est enregistrée et centralisée pour être vérifiée par notre équipe.
+
+      .step-item
+        .step-icon-box
+          svg.lucide-clock(xmlns="http://www.w3.org/2000/svg", width="22", height="22", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            circle(cx="12", cy="12", r="10")
+            path(d="M12 6v6l4 2")
+        h3.step-title(data-i18n="step3Title") 3. La mise en relation
+        p.step-desc(data-i18n="step3Desc") Nous rapprochons les besoins des familles et les profils des professionnels adaptés.
+
+section.banner-cta-section
+  .container.banner-cta-flex
+    h2.banner-title(data-i18n="ctaBannerTitle") Prêt à rejoindre Fermlya ?
+    p.banner-sub(data-i18n="ctaBannerSub") Déposez votre demande d'adhésion dès aujourd'hui, que vous cherchiez de l'aide ou que vous souhaitiez proposer vos services.
+    .banner-btn-group
+      button.btn.btn-secondary.open-modal-btn(data-tab="client", data-i18n="ctaBannerClient") Je cherche de l'aide
+      button.btn.btn-outline-light.open-modal-btn(data-tab="caregiver", data-i18n="ctaBannerPro") Je suis professionnel

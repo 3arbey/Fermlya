@@ -1,0 +1,160 @@
+.modal-overlay#lead-modal-overlay(aria-hidden="true")
+  .modal-container
+    button.modal-close-btn#modal-close-btn(aria-label="Fermer la fenêtre") &times;
+    
+    .modal-header
+      .modal-tabs
+        button.tab-btn.active#tab-client-btn(data-tab="client")
+          span 🏥 Besoin d'un Soignant
+        button.tab-btn#tab-caregiver-btn(data-tab="caregiver")
+          span 💼 Devenir Soignant Fermlya
+
+    .modal-body
+      // TAB 1: CLIENT / FAMILY LEAD FORM (Netlify Integrated)
+      form.lead-form.active#client-lead-form(
+        name="client-leads",
+        method="POST",
+        data-netlify="true",
+        data-netlify-honeypot="bot-field"
+      )
+        input(type="hidden", name="form-name", value="client-leads")
+        p.form-bot-field(hidden)
+          label Don't fill this out if you're human: 
+            input(name="bot-field")
+
+        .form-header-text
+          h3(data-i18n="formClientTitle") Demander un Infirmier ou Garde-Malade
+          p(data-i18n="formClientSubtitle") Recevez une réponse et une proposition de soignant en moins de 30 minutes.
+
+        .form-grid
+          .form-group
+            label(for="client-fullname", data-i18n="labelFullName") Nom & Prénom *
+            input#client-fullname(type="text", name="fullName", placeholder="ex: Kawtar El Amrani", required)
+
+          .form-group
+            label(for="client-phone", data-i18n="labelPhone") Numéro de Téléphone (WhatsApp) *
+            input#client-phone(type="tel", name="phone", placeholder="06 12 34 56 78", required)
+
+          .form-group
+            label(for="client-city", data-i18n="labelCity") Ville d'Intervention *
+            select#client-city(name="city", required)
+              option(value="") -- Sélectionner la ville --
+              option(value="Casablanca") Casablanca
+              option(value="Rabat-Salé") Rabat - Salé
+              option(value="Marrakech") Marrakech
+              option(value="Tanger") Tanger
+              option(value="Agadir") Agadir
+              option(value="Fès") Fès
+              option(value="Meknès") Meknès
+              option(value="Oujda") Oujda
+              option(value="Autre") Autre ville
+
+          .form-group
+            label(for="client-servicetype", data-i18n="labelServiceType") Type de Soin Souhaité *
+            select#client-servicetype(name="serviceType", required)
+              option(value="") -- Choisir la prestation --
+              option(value="Garde-Malade 24h") Garde-Malade Présence Continue (24h/24)
+              option(value="Garde-Malade Journée/Nuit") Garde-Malade Journée ou Nuit
+              option(value="Injections & Pansements") Injections & Pansements à domicile
+              option(value="Suivi Post-Opératoire") Suivi Chirurgical / Post-Opératoire
+              option(value="Soins Mère et Bébé") Soins Mère & Nouveau-né
+              option(value="Kinésithérapie") Kinésithérapie à domicile
+              option(value="Autre Soin") Autre besoin de soin
+
+          .form-group
+            label(for="client-urgency", data-i18n="labelUrgency") Degré d'Urgence *
+            select#client-urgency(name="urgency", required)
+              option(value="Immédiat (< 2 heures)") Immédiat (Urgent < 2h)
+              option(value="Aujourd'hui") Aujourd'hui
+              option(value="Cette semaine") Dans la semaine
+              option(value="Planification future") Réservation future
+
+          .form-group.full-width
+            label(for="client-details", data-i18n="labelDetails") Précisions médicales ou besoins particuliers (Optionnel)
+            textarea#client-details(name="details", rows="3", placeholder="ex: Patient âgé de 78 ans nécessitant aide à la mobilité et prise de constante...")
+
+        .form-footer
+          button.btn.btn-primary.btn-block.btn-submit(type="submit")
+            span.btn-text(data-i18n="btnSubmitClient") Envoyer ma Demande de Soin
+            span.spinner-icon(hidden) ⏳
+
+          p.form-disclaimer
+            span 🔒 Vos informations restent strictement confidentielles. Aucun frais avant validation.
+
+      // TAB 2: CAREGIVER / NURSE RECRUITMENT FORM (Netlify Integrated)
+      form.lead-form#caregiver-lead-form(
+        name="caregiver-leads",
+        method="POST",
+        data-netlify="true",
+        data-netlify-honeypot="bot-field"
+      )
+        input(type="hidden", name="form-name", value="caregiver-leads")
+        p.form-bot-field(hidden)
+          label Don't fill this out if you're human: 
+            input(name="bot-field")
+
+        .form-header-text
+          h3(data-i18n="formCaregiverTitle") Rejoignez le Réseau Fermlya
+          p(data-i18n="formCaregiverSubtitle") Vous êtes infirmier diplômé ou garde-malade expérimenté ? Accédez à des missions régulières et bien rémunérées au Maroc.
+
+        .form-grid
+          .form-group
+            label(for="cg-fullname", data-i18n="labelFullName") Nom & Prénom *
+            input#cg-fullname(type="text", name="fullName", placeholder="ex: Youssef Benjelloun", required)
+
+          .form-group
+            label(for="cg-phone", data-i18n="labelPhone") Numéro de Téléphone (WhatsApp) *
+            input#cg-phone(type="tel", name="phone", placeholder="06 98 76 54 32", required)
+
+          .form-group
+            label(for="cg-profession", data-i18n="labelProfession") Qualifications / Diplôme *
+            select#cg-profession(name="profession", required)
+              option(value="") -- Votre qualification --
+              option(value="Infirmier Diplômé d'État") Infirmier Diplômé d'État (IDE)
+              option(value="Infirmier Auxiliaire") Infirmier Auxiliaire / Aide-Soignant
+              option(value="Garde-Malade Expérimenté") Garde-Malade Qualifié
+              option(value="Kinésithérapeute") Kinésithérapeute Diplômé
+              option(value="Sage-Femme") Sage-Femme / Puéricultrice
+
+          .form-group
+            label(for="cg-city", data-i18n="labelCity") Ville de Résidence *
+            select#cg-city(name="city", required)
+              option(value="") -- Votre ville --
+              option(value="Casablanca") Casablanca
+              option(value="Rabat-Salé") Rabat - Salé
+              option(value="Marrakech") Marrakech
+              option(value="Tanger") Tanger
+              option(value="Agadir") Agadir
+              option(value="Fès") Fès
+              option(value="Autre") Autre
+
+          .form-group
+            label(for="cg-experience", data-i18n="labelExperience") Années d'Expérience *
+            select#cg-experience(name="experience", required)
+              option(value="Débutant (< 1 an)") Moins d'un an
+              option(value="1 à 3 ans") 1 à 3 ans
+              option(value="3 à 5 ans") 3 à 5 ans
+              option(value="Plus de 5 ans") Plus de 5 ans
+
+          .form-group.full-width
+            label(for="cg-bio", data-i18n="labelBio") Présentation succincte & disponibilités (Optionnel)
+            textarea#cg-bio(name="bio", rows="3", placeholder="ex: Disponible immédiatement pour gardes de nuit ou soins infirmiers à domicile...")
+
+        .form-footer
+          button.btn.btn-primary.btn-block.btn-submit(type="submit")
+            span.btn-text(data-i18n="btnSubmitCaregiver") Postuler Maintenant
+            span.spinner-icon(hidden) ⏳
+
+          p.form-disclaimer
+            span 📄 Validation des diplômes & entretien exigés avant toute attribution de mission.
+
+    // SUCCESS MODAL FEEDBACK
+    .modal-success-screen#modal-success-screen(hidden)
+      .success-icon-badge 🎉
+      h3(data-i18n="successTitle") Demande Transmise avec Succès !
+      p(data-i18n="successDesc") Merci de votre confiance. Notre équipe médicale traite votre demande et vous recontacte sur WhatsApp dans les plus brefs délais.
+      
+      .success-actions
+        a.btn.btn-whatsapp.btn-block#whatsapp-direct-link(href="https://wa.me/212600000000?text=Bonjour%20Fermlya,%20je%20viens%20de%20remplir%20le%20formulaire.", target="_blank", rel="noopener")
+          span 💬 Accélérer via WhatsApp Direct
+        button.btn.btn-outline.btn-block#modal-success-close Repasser à l'accueil

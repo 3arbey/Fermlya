@@ -1,0 +1,22 @@
+include ../mixins/city-pill.pug
+
+section.cities-section#cities
+  .container
+    .section-header.text-center
+      span.section-kicker(data-i18n="citiesKicker") Proximité Locale
+      h2.section-title(data-i18n="citiesTitle") Disponibles Dans Toutes les Grandes Villes du Maroc
+      p.section-subtitle(data-i18n="citiesSubtitle") Nos soignants et infirmiers interviennent à domicile dans vos quartiers, 7 jours sur 7.
+
+    .cities-grid
+      +cityPill("Casablanca", "Maârif, Gauthier, Ain Diab, Bouskoura...", "180+ soignants", true)
+      +cityPill("Rabat - Salé", "Agdal, Hay Riad, Souissi, Hassan...", "120+ soignants", true)
+      +cityPill("Marrakech", "Gueliz, Hivernage, Palmeraie, Targa...", "90+ soignants", true)
+      +cityPill("Tanger", "Malabata, City Center, Marchan, Boukhalef...", "85+ soignants", true)
+      +cityPill("Agadir", "Founty, Talborjt, Haut Founty, Sonaba...", "65+ soignants", true)
+      +cityPill("Fès", "Ville Nouvelle, Narjiss, Champs de Course...", "55+ soignants", false)
+      +cityPill("Meknès", "Hamria, Ville Nouvelle, Basatin...", "40+ soignants", false)
+      +cityPill("Oujda", "Centre-ville, Lazaret, Al Qods...", "35+ soignants", false)
+
+    .city-request-box
+      p(data-i18n="cityRequestText") Votre ville n'est pas encore affichée ? Nous élargissons notre réseau chaque semaine.
+      button.btn.btn-outline-sm.open-modal-btn(data-tab="client", data-i18n="cityRequestBtn") Demander une intervention dans ma ville

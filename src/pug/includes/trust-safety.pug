@@ -1,0 +1,45 @@
+include ../mixins/trust-badge.pug
+
+section.trust-section#trust
+  .container
+    .trust-wrapper
+      .trust-intro
+        span.section-kicker(data-i18n="trustKicker") Rigueur & Sécurité
+        h2.section-title(data-i18n="trustTitle") Vos Proches Méritent la Meilleure Attention
+        p.section-subtitle(data-i18n="trustSubtitle") Nous appliquons une procédure de vérification stricte à 5 niveaux avant d'accréditer le moindre infirmier ou soignant sur la plateforme Fermlya.
+        
+        .trust-checklist
+          .check-item
+            span.check-icon 🔒
+            span(data-i18n="check1") Vérification systématique de la Carte d'Identité Nationale (CIN).
+          .check-item
+            span.check-icon 🎓
+            span(data-i18n="check2") Audit strict des diplômes infirmiers et attestations de formation.
+          .check-item
+            span.check-icon 📜
+            span(data-i18n="check3") Contrôle du casier judiciaire et références auprès des employeurs précédents.
+          .check-item
+            span.check-icon ⏱️
+            span(data-i18n="check4") Évaluation de l'empathie, ponctualité et hygiène stricte.
+
+      .trust-badges-grid
+        +trustBadge(
+          "badge-icon 📜",
+          "Diplômes Authentifiés",
+          "Tous nos infirmiers détiennent un diplôme d'État ou équivalent reconnu au Maroc."
+        )
+        +trustBadge(
+          "badge-icon 🩺",
+          "Protocoles Sanitaires",
+          "Respect strict du matériel stérile, masques et gestes d'hygiène hospitalière à domicile."
+        )
+        +trustBadge(
+          "badge-icon 💬",
+          "Suivi Continu Famille",
+          "Un conseiller vous accompagne 7j/7 pour faire le point sur l'évolution de l'état du patient."
+        )
+        +trustBadge(
+          "badge-icon 🇲🇦",
+          "Conformité Réglementaire",
+          "Plateforme opérant en conformité avec la législation marocaine et la protection des données (CNDP)."
+        )

@@ -1,0 +1,40 @@
+include ../mixins/faq-item.pug
+
+section.faq-section#faq
+  .container
+    .section-header.text-center
+      span.section-kicker(data-i18n="faqKicker") Questions Fréquentes
+      h2.section-title(data-i18n="faqTitle") Tout Ce Que Vous Devez Savoir Sur Fermlya
+      p.section-subtitle(data-i18n="faqSubtitle") Réponses transparentes aux questions des familles et soignants au Maroc.
+
+    .faq-accordion-wrapper
+      +faqItem(
+        "1",
+        "Comment garantissez-vous les compétences des infirmiers et soignants ?",
+        "Tous nos professionnels font l'objet d'une vérification rigoureuse : vérification de la pièce d'identité (CIN), diplôme d'État d'infirmier ou certificat d'aide-soignant, contrôle du casier judiciaire et vérification des références professionnelles.",
+        true
+      )
+      +faqItem(
+        "2",
+        "En combien de temps un infirmier peut-il intervenir à mon domicile ?",
+        "En cas d'urgence (injection ponctuelle, pansement urgent, garde imprévue), notre réseau permet d'attribuer un soignant en moins de 30 à 60 minutes dans les grandes agglomérations (Casablanca, Rabat, Marrakech, Tanger).",
+        false
+      )
+      +faqItem(
+        "3",
+        "Quels sont les tarifs des prestations et comment s'effectue le paiement ?",
+        "Nos tarifs sont transparents et communiqués à l'avance en Dirhams (MAD). Aucun frais caché. Le paiement s'effectue directement par virement, espèces après intervention ou via notre plateforme sécurisée.",
+        false
+      )
+      +faqItem(
+        "4",
+        "Puis-je demander un garde-malade pour une garde de nuit ou 24h/24 ?",
+        "Oui, absolument. Nous proposons des formules flexibles : garde ponctuelle (quelques heures), garde de nuit complète, ou rotation de garde-malades pour une prise en charge continue 24h/24.",
+        false
+      )
+      +faqItem(
+        "5",
+        "Je suis infirmier / aide-soignant, comment rejoindre le réseau ?",
+        "Cliquez sur le bouton 'Devenir Soignant' sur le site, remplissez votre profil avec votre ville et vos spécialités. Notre équipe vous contactera pour un entretien de qualification.",
+        false
+      )

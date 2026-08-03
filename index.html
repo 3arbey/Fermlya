@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fermlya (فَرْمْلِيَة) — Mise en relation soins &amp; aide à la personne au Maroc</title>
+    <meta name="description" content="Fermlya met en relation les professionnels de l'aide à la personne et de la santé (infirmiers, garde-malades) avec les familles au Maroc.">
+    <meta name="keywords" content="fermlya, soinline, garde malade casablanca, infirmier a domicile maroc, soins a domicile rabat, infirmiere marrakech">
+    
+    <!-- SEO Canonical & Hreflang Tags -->
+    <link rel="canonical" href="https://fermlya.netlify.app/">
+    <link rel="alternate" hreflang="fr-MA" href="https://fermlya.netlify.app/index.html">
+    <link rel="alternate" hreflang="ar-MA" href="https://fermlya.netlify.app/ar.html">
+    <link rel="alternate" hreflang="en-MA" href="https://fermlya.netlify.app/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://fermlya.netlify.app/index.html">
+
+    <!-- OpenGraph & Social Media -->
+    <meta property="og:title" content="Fermlya — Soins &amp; Aide à la personne de confiance au Maroc">
+    <meta property="og:description" content="Mise en relation entre familles et professionnels de la santé et du soin à domicile au Maroc.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fermlya.netlify.app/">
+    <meta property="og:image" content="./assets/images/hero-caregiver.jpg">
+    <meta property="og:locale" content="fr_MA">
+
+    <!-- Google Fonts: Fraunces (Serif) + Nunito Sans + Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&amp;family=Fraunces:opsz,wght@9..144,400;500;600;700&amp;family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+  </head>
+  <body>
+    <!-- Hidden Netlify Forms setup for Static Parser Indexing -->
+    <form name="client-leads" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="form-name" value="client-leads">
+      <input type="text" name="bot-field">
+      <input type="text" name="fullName">
+      <input type="tel" name="phone">
+      <input type="text" name="city">
+      <input type="text" name="serviceType">
+      <input type="text" name="urgency">
+      <textarea name="details"></textarea>
+    </form>
+
+    <form name="caregiver-leads" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="form-name" value="caregiver-leads">
+      <input type="text" name="bot-field">
+      <input type="text" name="fullName">
+      <input type="tel" name="phone">
+      <input type="text" name="profession">
+      <input type="text" name="city">
+      <input type="text" name="experience">
+      <textarea name="bio"></textarea>
+    </form>
+
+    <!-- Header Navigation -->
+    <header class="site-header" id="site-header">
+      <div class="container header-container">
+        <a class="brand-logo" href="index.html">
+          <span class="brand-icon-box">
+            <svg class="lucide-heart-handshake" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path>
+            </svg>
+          </span>
+          <span class="brand-title">Fermlya</span>
+          <span class="brand-arabic-sub">فَرْمْلِيَة</span>
+        </a>
+
+        <nav class="main-nav" id="main-nav">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#pathways" data-i18n="navPathways">Les Parcours</a></li>
+            <li><a class="nav-link" href="#how-it-works" data-i18n="navHowItWorks">Comment ça marche</a></li>
+            <li><a class="nav-link" href="#services" data-i18n="navServices">Services</a></li>
+            <li><a class="nav-link" href="#cities" data-i18n="navCities">Villes</a></li>
+            <li><a class="nav-link" href="#trust" data-i18n="navTrust">Confiance</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <div class="language-selector">
+            <a class="lang-btn active" href="index.html" data-lang="fr">FR</a>
+            <a class="lang-btn" href="ar.html" data-lang="ar">العربية</a>
+            <a class="lang-btn" href="en.html" data-lang="en">EN</a>
+          </div>
+
+          <button class="btn btn-outline open-modal-btn" data-tab="caregiver" data-i18n="navPro">Je suis professionnel</button>
+          <button class="btn btn-primary open-modal-btn" data-tab="client" data-i18n="navClient">Je cherche de l'aide</button>
+
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Page Content -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <svg class="lucide-shield-check" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span data-i18n="heroBadge">Aide à la personne de confiance au Maroc</span>
+            </div>
+
+            <h1 class="hero-title" data-i18n="heroTitle">
+              La mise en relation entre 
+              <span class="highlight-serif">familles et professionnels </span>
+              du soin
+            </h1>
+
+            <p class="hero-subtitle" data-i18n="heroSubtitle">
+              Fermlya rassemble les demandes des familles qui cherchent un accompagnement à domicile (garde-malade, soins infirmiers) et celles des professionnels de l'aide à la personne et de la santé.
+            </p>
+
+            <div class="hero-cta-row">
+              <button class="btn btn-lg btn-primary open-modal-btn" data-tab="client" data-i18n="heroCtaClient">
+                <span>Je cherche de l'aide</span>
+                <svg class="lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+              <button class="btn btn-lg btn-outline open-modal-btn" data-tab="caregiver" data-i18n="heroCtaPro">
+                <span>Je suis professionnel</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-card">
+              <img src="./assets/images/hero-caregiver.jpg" alt="Une soignante accompagne avec le sourire une personne âgée au Maroc" loading="eager">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pathways Section -->
+      <section class="pathways-section" id="pathways">
+        <div class="container">
+          <h2 class="section-title text-center" data-i18n="pathwaysTitle">Deux parcours, une seule plateforme</h2>
+
+          <div class="pathways-grid">
+            <div class="pathway-card">
+              <div class="pathway-icon-box">
+                <svg class="lucide-house" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                  <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="pathway-title" data-i18n="pathwayClientTitle">Vous cherchez de l'aide</h3>
+              <p class="pathway-desc" data-i18n="pathwayClientDesc">Pour vous ou un proche : aide aux personnes âgées, accompagnement du handicap, garde médicale ou soutien quotidien. Décrivez votre besoin, sa fréquence et son urgence.</p>
+              <button class="btn btn-primary open-modal-btn" data-tab="client" data-i18n="pathwayClientBtn">
+                <span>Déposer une demande</span>
+                <svg class="lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="pathway-card">
+              <div class="pathway-icon-box">
+                <svg class="lucide-users" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h3 class="pathway-title" data-i18n="pathwayProTitle">Vous êtes professionnel</h3>
+              <p class="pathway-desc" data-i18n="pathwayProDesc">Aide-soignant, infirmier diplômé, auxiliaire de vie : présentez vos compétences, vos disponibilités et votre profil pour rejoindre notre réseau de confiance au Maroc.</p>
+              <button class="btn btn-outline open-modal-btn" data-tab="caregiver" data-i18n="pathwayProBtn">
+                <span>Proposer mes services</span>
+                <svg class="lucide-arrow-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services-section" id="services">
+        <div class="container">
+          <div class="section-header text-center">
+            <h2 class="section-title">Des Soins Médicaux et Humains sur Mesure</h2>
+            <p class="section-subtitle">Des solutions de prise en charge personnalisées dispensées à domicile par des professionnels vérifiés.</p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon-wrap">👵</div>
+              <h4>Garde-Malade &amp; Accompagnement</h4>
+              <p>Aide à la mobilité, présence rassurante 24h/24, gestion de la médication et accompagnement des aînés.</p>
+              <button class="btn btn-text-link open-modal-btn" data-tab="client">Demander ce soin &rarr;</button>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-wrap">💉</div>
+              <h4>Soins Infirmiers Techniques</h4>
+              <p>Injections, pansements complexes, perfusions et prélèvements prescrits par votre médecin.</p>
+              <button class="btn btn-text-link open-modal-btn" data-tab="client">Demander ce soin &rarr;</button>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-wrap">🏥</div>
+              <h4>Suivi Post-Opératoire</h4>
+              <p>Suivi chirurgical à domicile, surveillance des constantes et accompagnement post-hospitalier.</p>
+              <button class="btn btn-text-link open-modal-btn" data-tab="client">Demander ce soin &rarr;</button>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-wrap">👶</div>
+              <h4>Soins Mère &amp; Nouveau-Né</h4>
+              <p>Support post-partum, soins du bébé, conseils d'allaitement et gardes de nuit apaisantes.</p>
+              <button class="btn btn-text-link open-modal-btn" data-tab="client">Demander ce soin &rarr;</button>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-wrap">🫀</div>
+              <h4>Maladies Chroniques</h4>
+              <p>Prise en charge douce et adaptée pour diabète, hypertension, Alzheimer ou suivi longue durée.</p>
+              <button class="btn btn-text-link open-modal-btn" data-tab="client">Demander ce soin &rarr;</button>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-wrap">🧘‍♀️</div>
+              <h4>Kinésithérapie à Domicile</h4>
+              <p>Rééducation à la marche, fonctionnelle ou respiratoire assurée par des kinés diplômés.</p>
+              <button class="btn btn-text-link open-modal-btn" data-tab="client">Demander ce soin &rarr;</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="how-it-works-section" id="how-it-works">
+        <div class="container">
+          <h2 class="section-title text-center" data-i18n="howTitle">Comment ça marche</h2>
+
+          <div class="steps-grid">
+            <div class="step-item">
+              <div class="step-icon-box">
+                <svg class="lucide-clipboard-list" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                  <path d="M12 11h4"></path>
+                  <path d="M12 16h4"></path>
+                  <path d="M8 11h.01"></path>
+                  <path d="M8 16h.01"></path>
+                </svg>
+              </div>
+              <h3 class="step-title" data-i18n="step1Title">1. Déposez votre demande</h3>
+              <p class="step-desc" data-i18n="step1Desc">Familles et professionnels remplissent un court formulaire d'adhésion en ligne.</p>
+            </div>
+
+            <div class="step-item">
+              <div class="step-icon-box">
+                <svg class="lucide-heart-handshake" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path>
+                </svg>
+              </div>
+              <h3 class="step-title" data-i18n="step2Title">2. Nous étudions les demandes</h3>
+              <p class="step-desc" data-i18n="step2Desc">Chaque demande est enregistrée et centralisée pour être vérifiée par notre équipe.</p>
+            </div>
+
+            <div class="step-item">
+              <div class="step-icon-box">
+                <svg class="lucide-clock" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <h3 class="step-title" data-i18n="step3Title">3. La mise en relation</h3>
+              <p class="step-desc" data-i18n="step3Desc">Nous rapprochons les besoins des familles et les profils des professionnels adaptés.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Banner CTA Section -->
+      <section class="banner-cta-section">
+        <div class="container banner-cta-flex">
+          <h2 class="banner-title" data-i18n="ctaBannerTitle">Prêt à rejoindre Fermlya ?</h2>
+          <p class="banner-sub" data-i18n="ctaBannerSub">Déposez votre demande d'adhésion dès aujourd'hui, que vous cherchiez de l'aide ou que vous souhaitiez proposer vos services.</p>
+          <div class="banner-btn-group">
+            <button class="btn btn-secondary open-modal-btn" data-tab="client" data-i18n="ctaBannerClient">Je cherche de l'aide</button>
+            <button class="btn btn-outline-light open-modal-btn" data-tab="caregiver" data-i18n="ctaBannerPro">Je suis professionnel</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal Lead Forms -->
+    <div class="modal-overlay" id="lead-modal-overlay" aria-hidden="true">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Fermer">&times;</button>
+        
+        <div class="modal-header">
+          <div class="modal-tabs">
+            <button class="tab-btn active" id="tab-client-btn" data-tab="client">
+              <span>🏥 Je cherche de l'aide</span>
+            </button>
+            <button class="tab-btn" id="tab-caregiver-btn" data-tab="caregiver">
+              <span>💼 Je suis professionnel</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <!-- TAB 1: CLIENT FORM -->
+          <form class="lead-form active" id="client-lead-form" name="client-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="client-leads">
+            <p class="form-bot-field" hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-header-text">
+              <h3>Demande d'accompagnement ou de soin</h3>
+              <p>Remplissez ce formulaire pour recevoir un profil de soignant adapté sous 30 minutes.</p>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="client-fullname">Nom &amp; Prénom *</label>
+                <input type="text" id="client-fullname" name="fullName" placeholder="ex: Kawtar El Amrani" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-phone">Téléphone (WhatsApp) *</label>
+                <input type="tel" id="client-phone" name="phone" placeholder="06 12 34 56 78" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-city">Ville d'intervention *</label>
+                <select id="client-city" name="city" required>
+                  <option value="">-- Sélectionner la ville --</option>
+                  <option value="Casablanca">Casablanca</option>
+                  <option value="Rabat-Salé">Rabat - Salé</option>
+                  <option value="Marrakech">Marrakech</option>
+                  <option value="Tanger">Tanger</option>
+                  <option value="Agadir">Agadir</option>
+                  <option value="Fès">Fès</option>
+                  <option value="Autre">Autre ville</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="client-servicetype">Service souhaité *</label>
+                <select id="client-servicetype" name="serviceType" required>
+                  <option value="">-- Choisir la prestation --</option>
+                  <option value="Garde-Malade 24h">Garde-Malade (24h/24)</option>
+                  <option value="Garde-Malade Journée/Nuit">Garde Journée / Nuit</option>
+                  <option value="Injections &amp; Pansements">Injections &amp; Pansements</option>
+                  <option value="Suivi Post-Opératoire">Suivi Post-Opératoire</option>
+                  <option value="Kinésithérapie">Kinésithérapie à domicile</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="client-details">Précisions médicales ou besoin particulier</label>
+                <textarea id="client-details" name="details" rows="3" placeholder="Décrivez succinctement la situation..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary btn-block btn-submit" type="submit">
+                <span>Déposer ma demande</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- TAB 2: CAREGIVER FORM -->
+          <form class="lead-form" id="caregiver-lead-form" name="caregiver-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="caregiver-leads">
+            <p class="form-bot-field" hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-header-text">
+              <h3>Rejoindre le réseau Fermlya</h3>
+              <p>Proposez vos services de garde-malade, infirmier ou soignant qualifié au Maroc.</p>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cg-fullname">Nom &amp; Prénom *</label>
+                <input type="text" id="cg-fullname" name="fullName" placeholder="ex: Youssef Benjelloun" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-phone">Téléphone (WhatsApp) *</label>
+                <input type="tel" id="cg-phone" name="phone" placeholder="06 98 76 54 32" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-profession">Qualification / Diplôme *</label>
+                <select id="cg-profession" name="profession" required>
+                  <option value="">-- Votre qualification --</option>
+                  <option value="Infirmier Diplômé d'État">Infirmier Diplômé d'État (IDE)</option>
+                  <option value="Aide-Soignant">Infirmier Auxiliaire / Aide-Soignant</option>
+                  <option value="Garde-Malade">Garde-Malade Expérimenté</option>
+                  <option value="Kinésithérapeute">Kinésithérapeute Diplômé</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-city">Ville de résidence *</label>
+                <select id="cg-city" name="city" required>
+                  <option value="">-- Votre ville --</option>
+                  <option value="Casablanca">Casablanca</option>
+                  <option value="Rabat-Salé">Rabat - Salé</option>
+                  <option value="Marrakech">Marrakech</option>
+                  <option value="Tanger">Tanger</option>
+                  <option value="Agadir">Agadir</option>
+                  <option value="Fès">Fès</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary btn-block btn-submit" type="submit">
+                <span>Proposer mes services</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-success-screen" id="modal-success-screen" hidden>
+          <div class="success-icon-badge">🎉</div>
+          <h3>Demande transmise avec succès !</h3>
+          <p>Merci de votre confiance. Notre équipe vous recontacte rapidement.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-flex">
+        <div class="brand-logo">
+          <span class="brand-icon-box">
+            <svg class="lucide-heart-handshake" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path>
+            </svg>
+          </span>
+          <span class="brand-title">Fermlya</span>
+        </div>
+        <p>Plateforme de mise en relation dans l'aide à la personne au Maroc 🇲🇦.</p>
+        <p>&copy; 2026 Fermlya. Tous droits réservés.</p>
+      </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

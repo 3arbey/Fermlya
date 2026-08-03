@@ -1,0 +1,24 @@
+{
+  "name": "fermlya-landing-page",
+  "version": "1.0.0",
+  "description": "Fermlya (فَرْمْلِيَة) - Static Pug Landing Page for Home Care & Nursing Marketplace in Morocco",
+  "scripts": {
+    "build:pug": "pug src/pug/index.pug -o . && pug src/pug/index-ar.pug -o . --out ar.html && pug src/pug/index-en.pug -o . --out en.html",
+    "serve": "npx serve ."
+  },
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "keywords": [
+    "morocco",
+    "nursing",
+    "caregiver",
+    "netlify-forms",
+    "pug",
+    "static-landing-page",
+    "seo"
+  ],
+  "author": "Fermlya",
+  "license": "MIT"
+}

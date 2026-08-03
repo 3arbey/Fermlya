@@ -1,0 +1,18 @@
+mixin serviceCard(icon, title, desc, tag, bullets)
+  .service-card
+    .service-card-header
+      .service-icon
+        i(class=icon)
+      if tag
+        span.service-tag= tag
+    h3.service-title= title
+    p.service-desc= desc
+    if bullets && bullets.length
+      ul.service-bullets
+        each bullet in bullets
+          li
+            svg(viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none")
+              polyline(points="20 6 9 17 4 12")
+            span= bullet
+    .service-card-footer
+      button.btn.btn-outline-sm.open-modal-btn(data-service=title, data-i18n-btn="requestService") Demander ce soin

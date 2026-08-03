@@ -1,0 +1,7 @@
+mixin cityPill(name, region, count, isPopular)
+  .city-pill-item(class=isPopular ? 'popular' : '')
+    .city-info
+      span.city-name= name
+      span.city-region= region
+    if count
+      span.city-count= count

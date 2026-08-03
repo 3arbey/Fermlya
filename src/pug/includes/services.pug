@@ -1,0 +1,76 @@
+section.pathways-section#pathways
+  .container
+    h2.section-title.text-center(data-i18n="pathwaysTitle") Deux parcours, une seule plateforme
+
+    .pathways-grid
+      .pathway-card
+        .pathway-icon-box
+          svg.lucide-house(xmlns="http://www.w3.org/2000/svg", width="26", height="26", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            path(d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8")
+            path(d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z")
+        h3.pathway-title(data-i18n="pathwayClientTitle") Vous cherchez de l'aide
+        p.pathway-desc(data-i18n="pathwayClientDesc") Pour vous ou un proche : aide aux personnes âgées, accompagnement du handicap, garde médicale ou soutien quotidien. Décrivez votre besoin, sa fréquence et son urgence.
+        button.btn.btn-primary.open-modal-btn(data-tab="client", data-i18n="pathwayClientBtn")
+          span Déposer une demande
+          svg.lucide-arrow-right(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            path(d="M5 12h14")
+            path(d="m12 5 7 7-7 7")
+
+      .pathway-card
+        .pathway-icon-box
+          svg.lucide-users(xmlns="http://www.w3.org/2000/svg", width="26", height="26", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            path(d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2")
+            path(d="M16 3.128a4 4 0 0 1 0 7.744")
+            path(d="M22 21v-2a4 4 0 0 0-3-3.87")
+            circle(cx="9", cy="7", r="4")
+        h3.pathway-title(data-i18n="pathwayProTitle") Vous êtes professionnel
+        p.pathway-desc(data-i18n="pathwayProDesc") Aide-soignant, infirmier diplômé, auxiliaire de vie : présentez vos compétences, vos disponibilités et votre profil pour rejoindre notre réseau de confiance au Maroc.
+        button.btn.btn-outline.open-modal-btn(data-tab="caregiver", data-i18n="pathwayProBtn")
+          span Proposer mes services
+          svg.lucide-arrow-right(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2", stroke-linecap="round", stroke-linejoin="round")
+            path(d="M5 12h14")
+            path(d="m12 5 7 7-7 7")
+
+section.services-section#services
+  .container
+    .section-header.text-center
+      span.section-kicker(data-i18n="servicesKicker") Services d'Accompagnement
+      h2.section-title(data-i18n="servicesTitle") Des Soins Médicaux et Humains sur Mesure
+      p.section-subtitle(data-i18n="servicesSubtitle") Des solutions de prise en charge personnalisées dispensées à domicile par des professionnels vérifiés.
+
+    .services-grid
+      .service-card
+        .service-icon-wrap 👵
+        h4.service-title Garde-Malade & Accompagnement
+        p.service-desc Aide à la mobilité, présence rassurante 24h/24, gestion de la médication et accompagnement des aînés.
+        button.btn.btn-text-link.open-modal-btn(data-tab="client") Demander ce soin &rarr;
+
+      .service-card
+        .service-icon-wrap 💉
+        h4.service-title Soins Infirmiers Techniques
+        p.service-desc Injections, pansements complexes, perfusions et prélèvements prescrits par votre médecin.
+        button.btn.btn-text-link.open-modal-btn(data-tab="client") Demander ce soin &rarr;
+
+      .service-card
+        .service-icon-wrap 🏥
+        h4.service-title Suivi Post-Opératoire
+        p.service-desc Suivi chirurgical à domicile, surveillance des constantes et accompagnement post-hospitalier.
+        button.btn.btn-text-link.open-modal-btn(data-tab="client") Demander ce soin &rarr;
+
+      .service-card
+        .service-icon-wrap 👶
+        h4.service-title Soins Mère & Nouveau-Né
+        p.service-desc Support post-partum, soins du bébé, conseils d'allaitement et gardes de nuit apaisantes.
+        button.btn.btn-text-link.open-modal-btn(data-tab="client") Demander ce soin &rarr;
+
+      .service-card
+        .service-icon-wrap 🫀
+        h4.service-title Maladies Chroniques
+        p.service-desc Prise en charge douce et adaptée pour diabète, hypertension, Alzheimer ou suivi longue durée.
+        button.btn.btn-text-link.open-modal-btn(data-tab="client") Demander ce soin &rarr;
+
+      .service-card
+        .service-icon-wrap 🧘‍♀️
+        h4.service-title Kinésithérapie à Domicile
+        p.service-desc Rééducation à la marche, fonctionnelle ou respiratoire assurée par des kinés diplômés.
+        button.btn.btn-text-link.open-modal-btn(data-tab="client") Demander ce soin &rarr;

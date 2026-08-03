@@ -1,0 +1,9 @@
+mixin faqItem(id, question, answer, isOpen)
+  .faq-accordion-item(class=isOpen ? 'active' : '')
+    button.faq-question-btn(aria-expanded=isOpen ? 'true' : 'false', aria-controls=`faq-ans-${id}`)
+      span= question
+      span.faq-icon
+        svg(viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none")
+          polyline(points="6 9 12 15 18 9")
+    .faq-answer-panel(id=`faq-ans-${id}`, class=isOpen ? 'open' : '')
+      p= answer
