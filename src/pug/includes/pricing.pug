@@ -1,0 +1,107 @@
+section.pricing-section#pricing
+  .container
+    .pricing-header.text-center
+      h2.section-title(data-i18n="pricingTitle") Tarifs & Offres Transparents
+      p.section-subtitle(data-i18n="pricingSubtitle") Des tarifs clairs, sans surprise et adaptés à chaque besoin familial au Maroc. Exemples de tarifs indicatifs en Dirham marocain (DH).
+
+    .pricing-grid
+      // Card 1: Actes Ponctuels
+      .pricing-card
+        .card-top
+          span.pricing-badge 🩹 Soins ponctuels
+          h3.pricing-title Actes de Soin
+          p.pricing-desc Injections, pansements, perfusions et prélèvements sur rendez-vous à domicile.
+          .price-box
+            span.price-label-start Dès
+            span.price-val 150
+            span.price-unit DH / acte
+        ul.pricing-features
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Infirmiers diplômés d'État
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Matériel stérile fourni
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Intervention rapide 7j/7
+        button.btn.btn-outline.btn-block.open-modal-btn(data-tab="client") Demander un soin
+
+      // Card 2: Garde de Nuit (Featured)
+      .pricing-card.featured
+        span.pricing-popular-tag Populaire
+        .card-top
+          span.pricing-badge 🌙 Présence 12h (20h-08h)
+          h3.pricing-title Garde de Nuit
+          p.pricing-desc Surveillance bienveillante et aide nocturne pour personnes âgées ou convalescentes.
+          .price-box
+            span.price-label-start Dès
+            span.price-val 350
+            span.price-unit DH / nuit
+        ul.pricing-features
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Veille attentive continue
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Aide aux déplacements nocturnes
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Prise des médicaments du soir
+        button.btn.btn-primary.btn-block.open-modal-btn(data-tab="client") Réserver une nuit
+
+      // Card 3: Garde 24h/24 Continu
+      .pricing-card
+        .card-top
+          span.pricing-badge ☀️🌙 Roulement 2 équipes
+          h3.pricing-title Garde 24h / 24
+          p.pricing-desc Prise en charge intégrale jour et nuit pour une sérénité totale des familles.
+          .price-box
+            span.price-label-start Dès
+            span.price-val 600
+            span.price-unit DH / jour
+        ul.pricing-features
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Soins d'hygiène et de confort
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Préparation des repas & aide
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Suivi de constante médicale
+        button.btn.btn-outline.btn-block.open-modal-btn(data-tab="client") Devis 24h/24
+
+      // Card 4: Pack Mensuel
+      .pricing-card
+        .card-top
+          span.pricing-badge 🏠 Accompagnement Longue Durée
+          h3.pricing-title Formule Mensuelle
+          p.pricing-desc Suivi personnalisé avec infirmière référente et garde-malade qualifiée.
+          .price-box
+            span.price-label-start Dès
+            span.price-val 3 500
+            span.price-unit DH / mois
+        ul.pricing-features
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Infirmière référente dédiée
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Remplacement garanti en 2h
+          li
+            svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16", viewBox="0 0 24 24", fill="none", stroke="currentColor", stroke-width="2.5", stroke-linecap="round", stroke-linejoin="round")
+              polyline(points="20 6 9 17 4 12")
+            span Hotline d'urgence 7j/7
+        button.btn.btn-outline.btn-block.open-modal-btn(data-tab="client") Découvrir l'offre

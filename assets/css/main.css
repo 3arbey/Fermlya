@@ -4,24 +4,27 @@
    ========================================================================== */
 
 :root {
-  /* Colors matching https://v0-fermlya.vercel.app/ */
-  --primary: #2F8F86;                 /* Teal Primary */
-  --primary-hover: #25756E;
+  /* Warmer Color Palette - messoins.com */
+  --primary: #C8552D;                 /* Terracotta Warm Clay Primary */
+  --primary-hover: #B34723;
   --primary-foreground: #FFFFFF;
 
-  --secondary: #E8F3F1;               /* Soft Teal Badge Background */
-  --secondary-foreground: #1E5B55;
+  --secondary: #FDF4EF;               /* Soft Warm Terracotta/Honey Badge Background */
+  --secondary-foreground: #943818;
 
-  --background: #FAF9F5;              /* Soft Warm Cream */
+  --background: #FAF6F0;              /* Warm Silk Sand / Cream */
   --card: #FFFFFF;
-  --card-foreground: #1C2927;
+  --card-foreground: #2C221E;
 
-  --foreground: #1C2927;              /* Deep Slate Teal Text */
-  --muted-foreground: #5F7370;        /* Muted Body Copy */
+  --foreground: #2C221E;              /* Deep Warm Espresso Charcoal */
+  --muted-foreground: #7A6B63;        /* Warm Muted Body Copy */
 
-  --border: #ECE8E1;                  /* Subtle Warm Border */
-  --input: #ECE8E1;
-  --ring: #2F8F86;
+  --border: #EFE6DC;                  /* Warm Soft Border */
+  --input: #EFE6DC;
+  --ring: #C8552D;
+
+  --accent-emerald: #1E5B55;          /* Deep Soft Emerald / Sage Accent */
+  --accent-gold: #D97706;             /* Warm Gold/Amber Highlight */
 
   /* Typography matching v0 module fonts */
   --font-serif: 'Fraunces', Georgia, serif;
@@ -36,13 +39,16 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 1px 3px 0 rgba(44, 34, 30, 0.05);
+  --shadow-md: 0 6px 12px -2px rgba(44, 34, 30, 0.08), 0 3px 6px -2px rgba(44, 34, 30, 0.04);
 }
 
-/* RTL Support */
+/* RTL Support & Strict Arabic Non-Italics */
 [dir="rtl"] {
   font-family: var(--font-arabic), system-ui, sans-serif;
+  font-style: normal !important;
+}
+[dir="rtl"] * {
   font-style: normal !important;
 }
 [dir="ltr"] {
@@ -641,3 +647,133 @@ a {
   .form-grid { grid-template-columns: 1fr; }
   .form-group.full-width { grid-column: span 1; }
 }
+
+/* ==========================================================================
+   Pricing & Transparent Offers Section - messoins.com
+   ========================================================================== */
+.pricing-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--background);
+}
+.pricing-header {
+  max-width: 44rem;
+  margin: 0 auto 3rem auto;
+}
+.pricing-header .section-subtitle {
+  color: var(--muted-foreground);
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+}
+.pricing-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.pricing-card {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+.pricing-card.featured {
+  border: 2px solid var(--primary);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FDF8F5 100%);
+}
+.pricing-popular-tag {
+  position: absolute;
+  top: -12px;
+  right: 1.5rem;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+[dir="rtl"] .pricing-popular-tag {
+  right: auto;
+  left: 1.5rem;
+}
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  margin-bottom: 0.75rem;
+}
+.pricing-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.35rem;
+}
+.pricing-desc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  min-height: 2.6rem;
+  margin-bottom: 1.25rem;
+}
+.price-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--border);
+}
+.price-label-start {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+}
+.price-val {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.price-unit {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+.pricing-features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pricing-features li svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+

@@ -3,23 +3,23 @@ html(lang=lang || "fr", dir=dir || "ltr")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title= pageTitle || "Fermlya (فَرْمْلِيَة) — Mise en relation soins & aide à la personne au Maroc"
-    meta(name="description", content=pageDescription || "Fermlya met en relation les professionnels de l'aide à la personne et de la santé (infirmiers, garde-malades) avec les familles au Maroc.")
-    meta(name="keywords", content="fermlya, soinline, garde malade casablanca, infirmier a domicile maroc, soins a domicile rabat, infirmiere marrakech")
+    title= pageTitle || "messoins.com — Soins à domicile & Garde malades au Maroc | Infirmiers de confiance"
+    meta(name="description", content=pageDescription || "messoins.com met en relation les familles au Maroc avec des infirmiers diplômés d'État et garde-malades qualifiés à domicile (Casablanca, Rabat, Marrakech, Tanger...).")
+    meta(name="keywords", content="messoins.com, messoins, soins a domicile maroc, infirmier a domicile casablanca, garde malade rabat, infirmiere marrakech, aide soignante domicile maroc, tarifs infirmiere domicile maroc")
     
     // SEO Canonical & Hreflang Tags
-    link(rel="canonical", href=canonicalUrl || "https://fermlya.netlify.app/")
-    link(rel="alternate", hreflang="fr-MA", href="https://fermlya.netlify.app/index.html")
-    link(rel="alternate", hreflang="ar-MA", href="https://fermlya.netlify.app/ar.html")
-    link(rel="alternate", hreflang="en-MA", href="https://fermlya.netlify.app/en.html")
-    link(rel="alternate", hreflang="x-default", href="https://fermlya.netlify.app/index.html")
+    link(rel="canonical", href=canonicalUrl || "https://messoins.com/")
+    link(rel="alternate", hreflang="fr-MA", href="https://messoins.com/index.html")
+    link(rel="alternate", hreflang="ar-MA", href="https://messoins.com/ar.html")
+    link(rel="alternate", hreflang="en-MA", href="https://messoins.com/en.html")
+    link(rel="alternate", hreflang="x-default", href="https://messoins.com/index.html")
 
     // OpenGraph & Social Media
-    meta(property="og:title", content=pageTitle || "Fermlya — Soins & Aide à la personne de confiance au Maroc")
-    meta(property="og:description", content=pageDescription || "Mise en relation entre familles et professionnels de la santé et du soin à domicile au Maroc.")
+    meta(property="og:title", content=pageTitle || "messoins.com — Soins & Aide à la personne de confiance au Maroc")
+    meta(property="og:description", content=pageDescription || "Plateforme n°1 au Maroc de mise en relation entre familles et infirmiers / garde-malades qualifiés à domicile.")
     meta(property="og:type", content="website")
-    meta(property="og:url", content=canonicalUrl || "https://fermlya.netlify.app/")
-    meta(property="og:image", content="./assets/images/hero-caregiver.jpg")
+    meta(property="og:url", content=canonicalUrl || "https://messoins.com/")
+    meta(property="og:image", content="./assets/images/hero-messoins.jpg")
     meta(property="og:locale", content=lang === "ar" ? "ar_MA" : (lang === "en" ? "en_US" : "fr_MA"))
 
     // Google Fonts: Fraunces (Editorial Warm Serif) + Nunito Sans + Cairo (Arabic)
@@ -30,16 +30,34 @@ html(lang=lang || "fr", dir=dir || "ltr")
     // Main Stylesheet
     link(rel="stylesheet", href="./assets/css/main.css")
 
-    // Structured Data JSON-LD
+    // Structured Data JSON-LD for SEO & Rich Results
     script(type="application/ld+json").
       {
         "@context": "https://schema.org",
-        "@type": "MedicalOrganization",
-        "name": "Fermlya (فَرْمْلِيَة)",
-        "url": "https://fermlya.netlify.app",
-        "logo": "https://fermlya.netlify.app/assets/images/logo.png",
-        "description": "Plateforme de mise en relation dans l'aide à la personne et soins à domicile au Maroc.",
-        "areaServed": ["Casablanca", "Rabat", "Marrakech", "Tanger", "Agadir", "Fès", "Meknès", "Oujda"]
+        "@type": "MedicalBusiness",
+        "name": "messoins.com",
+        "alternateName": ["Mes Soins Maroc", "مـي صـوان"],
+        "url": "https://messoins.com",
+        "logo": "https://messoins.com/assets/images/hero-messoins.jpg",
+        "image": "https://messoins.com/assets/images/hero-messoins.jpg",
+        "description": "Plateforme n°1 de mise en relation pour soins infirmiers à domicile et garde-malades qualifiés au Maroc.",
+        "priceRange": "150 DH - 3500 DH",
+        "telephone": "+212522889900",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Casablanca",
+          "addressCountry": "MA"
+        },
+        "areaServed": [
+          {"@type": "City", "name": "Casablanca"},
+          {"@type": "City", "name": "Rabat"},
+          {"@type": "City", "name": "Marrakech"},
+          {"@type": "City", "name": "Tanger"},
+          {"@type": "City", "name": "Agadir"},
+          {"@type": "City", "name": "Fès"},
+          {"@type": "City", "name": "Meknès"},
+          {"@type": "City", "name": "Oujda"}
+        ]
       }
 
   body
