@@ -329,6 +329,164 @@
       </section>
     </main>
 
+    <!-- Modal Lead Forms -->
+    <div class="modal-overlay" id="lead-modal-overlay" aria-hidden="true">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close">&times;</button>
+        
+        <div class="modal-header">
+          <div class="modal-tabs">
+            <button class="tab-btn active" id="tab-client-btn" data-tab="client">
+              <span>🏥 I Need Care</span>
+            </button>
+            <button class="tab-btn" id="tab-caregiver-btn" data-tab="caregiver">
+              <span>💼 I am a Professional</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <!-- TAB 1: CLIENT FORM -->
+          <form class="lead-form active" id="client-lead-form" name="client-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="client-leads">
+            <p class="form-bot-field" hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-header-text">
+              <h3>Request In-Home Nursing or Caregiving</h3>
+              <p>Fill out this short form to receive a matched caregiver profile within 30 minutes.</p>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="client-fullname">Full Name *</label>
+                <input type="text" id="client-fullname" name="fullName" placeholder="e.g. Kawtar El Amrani" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-phone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="client-phone" name="phone" placeholder="06 12 34 56 78" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-city">Service City *</label>
+                <select id="client-city" name="city" required>
+                  <option value="">-- Select City --</option>
+                  <option value="Casablanca">Casablanca</option>
+                  <option value="Rabat-Salé">Rabat - Salé</option>
+                  <option value="Marrakech">Marrakech</option>
+                  <option value="Tangier">Tangier</option>
+                  <option value="Agadir">Agadir</option>
+                  <option value="Fez">Fez</option>
+                  <option value="Other">Other City</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="client-servicetype">Requested Care Service *</label>
+                <select id="client-servicetype" name="serviceType" required>
+                  <option value="">-- Select Service --</option>
+                  <option value="Aide à la personne à autonomie réduite">Reduced Autonomy &amp; Mobility Support</option>
+                  <option value="Aide-Soignant &amp; Paramédical">Nursing Assistant &amp; Paramedical Care</option>
+                  <option value="Garde-Malade 24h">24/7 Continuous Caregiver</option>
+                  <option value="Garde-Malade Journée/Nuit">Day or Night Shift Caregiver</option>
+                  <option value="Injections &amp; Pansements">In-Home Nursing &amp; Wound Care</option>
+                  <option value="Suivi Post-Opératoire">Post-Operative Recovery</option>
+                  <option value="Kinésithérapie">Home Physiotherapy</option>
+                  <option value="Other Service">Other Care Need</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="client-details">Specific Requirements or Patient Mobility Details</label>
+                <textarea id="client-details" name="details" rows="3" placeholder="Describe mobility, hygiene, or bedside care needs..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary btn-block btn-submit" type="submit">
+                <span>Submit Care Request</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- TAB 2: CAREGIVER FORM -->
+          <form class="lead-form" id="caregiver-lead-form" name="caregiver-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="caregiver-leads">
+            <p class="form-bot-field" hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-header-text">
+              <h3>Join Mes soins Caregiver Network</h3>
+              <p>Offer your certified nursing, caregiver, or paramedical services across Morocco.</p>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cg-fullname">Full Name *</label>
+                <input type="text" id="cg-fullname" name="fullName" placeholder="e.g. Youssef Benjelloun" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-phone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="cg-phone" name="phone" placeholder="06 98 76 54 32" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-profession">Qualification / Role *</label>
+                <select id="cg-profession" name="profession" required>
+                  <option value="">-- Select Role --</option>
+                  <option value="Infirmier Diplômé d'État">Registered Nurse (RN / IDE)</option>
+                  <option value="Aide-Soignant &amp; Paramédical">Nursing Assistant / Paramedical Specialist</option>
+                  <option value="Aide Autonomie Réduite">Autonomy Assistant / Elderly Caregiver</option>
+                  <option value="Garde-Malade">Experienced Bedside Caregiver</option>
+                  <option value="Kinésithérapeute">Licensed Physiotherapist</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-city">City of Residence *</label>
+                <select id="cg-city" name="city" required>
+                  <option value="">-- Select City --</option>
+                  <option value="Casablanca">Casablanca</option>
+                  <option value="Rabat-Salé">Rabat - Salé</option>
+                  <option value="Marrakech">Marrakech</option>
+                  <option value="Tangier">Tangier</option>
+                  <option value="Agadir">Agadir</option>
+                  <option value="Fez">Fez</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-experience">Years of Experience *</label>
+                <select id="cg-experience" name="experience" required>
+                  <option value="">-- Years of Experience --</option>
+                  <option value="Débutant (< 1 an)">Less than 1 year</option>
+                  <option value="1 à 3 ans">1 to 3 years</option>
+                  <option value="3 à 5 ans">3 to 5 years</option>
+                  <option value="Plus de 5 ans">More than 5 years</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary btn-block btn-submit" type="submit">
+                <span>Apply Now</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-success-screen" id="modal-success-screen" hidden>
+          <div class="success-icon-badge">🎉</div>
+          <h3>Request Submitted Successfully!</h3>
+          <p>Thank you for your trust. Our medical team will contact you shortly.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-flex">

@@ -327,6 +327,164 @@
       </section>
     </main>
 
+    <!-- Modal Lead Forms -->
+    <div class="modal-overlay" id="lead-modal-overlay" aria-hidden="true">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="إغلاق">&times;</button>
+        
+        <div class="modal-header">
+          <div class="modal-tabs">
+            <button class="tab-btn active" id="tab-client-btn" data-tab="client">
+              <span>🏥 أبحث عن رعاية</span>
+            </button>
+            <button class="tab-btn" id="tab-caregiver-btn" data-tab="caregiver">
+              <span>💼 أنا مهني صحي</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <!-- TAB 1: CLIENT FORM -->
+          <form class="lead-form active" id="client-lead-form" name="client-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="client-leads">
+            <p class="form-bot-field" hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-header-text">
+              <h3>طلب مرافقة أو رعاية منزلية</h3>
+              <p>املأ الاستمارة للحصول على ملف المهني المناسب خلال 30 دقيقة.</p>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="client-fullname">الاسم الكامل *</label>
+                <input type="text" id="client-fullname" name="fullName" placeholder="مثال: كوثر العمراني" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-phone">الهاتف (واتساب) *</label>
+                <input type="tel" id="client-phone" name="phone" placeholder="06 12 34 56 78" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-city">مدينة التدخل *</label>
+                <select id="client-city" name="city" required>
+                  <option value="">-- اختر المدينة --</option>
+                  <option value="Casablanca">الدار البيضاء</option>
+                  <option value="Rabat-Salé">الرباط - سلا</option>
+                  <option value="Marrakech">مراكش</option>
+                  <option value="Tanger">طنجة</option>
+                  <option value="Agadir">أكادير</option>
+                  <option value="Fès">فاس</option>
+                  <option value="Autre">مدينة أخرى</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="client-servicetype">نوع الخدمة المطلوبة *</label>
+                <select id="client-servicetype" name="serviceType" required>
+                  <option value="">-- اختر الخدمة --</option>
+                  <option value="Aide à la personne à autonomie réduite">مساعدة الأشخاص محدودي الحركة والتردد</option>
+                  <option value="Aide-Soignant &amp; Paramédical">مساعد تمريض والخدمات شبه الطبية</option>
+                  <option value="Garde-Malade 24h">مرافقة مريض 24/24 ساعة</option>
+                  <option value="Garde-Malade Journée/Nuit">مرافقة نهارية / ليلية</option>
+                  <option value="Injections &amp; Pansements">حقن وتغيير ضمادات بالمنزل</option>
+                  <option value="Suivi Post-Opératoire">متابعة ما بعد العمليات</option>
+                  <option value="Kinésithérapie">ترويض طبي بالمنزل</option>
+                  <option value="Autre Soin">خدمة أخرى</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="client-details">تفاصيل وتوضيحات حول الحالة (مستوى الحركة، النظافة الشخصية...)</label>
+                <textarea id="client-details" name="details" rows="3" placeholder="اكتب تفاصيل إضافية حول احتياجات المريض..."></textarea>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary btn-block btn-submit" type="submit">
+                <span>إرسال الطلب</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- TAB 2: CAREGIVER FORM -->
+          <form class="lead-form" id="caregiver-lead-form" name="caregiver-leads" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="caregiver-leads">
+            <p class="form-bot-field" hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="form-header-text">
+              <h3>الانضمام لشبكة Mes soins</h3>
+              <p>قدّم خدماتك كممرض، مساعد تمريض، أو مرافق مريض مؤهل بالمغرب.</p>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="cg-fullname">الاسم الكامل *</label>
+                <input type="text" id="cg-fullname" name="fullName" placeholder="مثال: يوسف بنجلون" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-phone">الهاتف (واتساب) *</label>
+                <input type="tel" id="cg-phone" name="phone" placeholder="06 98 76 54 32" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-profession">التخصص / المؤهل *</label>
+                <select id="cg-profession" name="profession" required>
+                  <option value="">-- اختر تخصصك --</option>
+                  <option value="Infirmier Diplômé d'État">ممرض حاصل على دبلوم الدولة (IDE)</option>
+                  <option value="Aide-Soignant &amp; Paramédical">مساعد تمريض / مهني شبه طبي</option>
+                  <option value="Aide Autonomie Réduite">مساعد حياة / رعاية محدودي الحركة</option>
+                  <option value="Garde-Malade">مرافق مريض ذو خبرة</option>
+                  <option value="Kinésithérapeute">مروض طبي معتمد</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-city">مدينة الإقامة *</label>
+                <select id="cg-city" name="city" required>
+                  <option value="">-- مدينتك --</option>
+                  <option value="Casablanca">الدار البيضاء</option>
+                  <option value="Rabat-Salé">الرباط - سلا</option>
+                  <option value="Marrakech">مراكش</option>
+                  <option value="Tanger">طنجة</option>
+                  <option value="Agadir">أكادير</option>
+                  <option value="Fès">فاس</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cg-experience">سنوات الخبرة *</label>
+                <select id="cg-experience" name="experience" required>
+                  <option value="">-- اختر سنوات الخبرة --</option>
+                  <option value="Débutant (< 1 an)">أقل من سنة</option>
+                  <option value="1 à 3 ans">من 1 إلى 3 سنوات</option>
+                  <option value="3 à 5 ans">من 3 إلى 5 سنوات</option>
+                  <option value="Plus de 5 ans">أكثر من 5 سنوات</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-footer">
+              <button class="btn btn-primary btn-block btn-submit" type="submit">
+                <span>تقديم الطلب</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-success-screen" id="modal-success-screen" hidden>
+          <div class="success-icon-badge">🎉</div>
+          <h3>تم إرسال الطلب بنجاح!</h3>
+          <p>شكراً لثقتكم. سيتواصل معكم فريقنا الطبي في أقرب وقت.</p>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-flex">
