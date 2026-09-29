@@ -519,19 +519,21 @@
                 <label for="client-servicetype">Service souhaité *</label>
                 <select id="client-servicetype" name="serviceType" required>
                   <option value="">-- Choisir la prestation --</option>
+                  <option value="Aide à la personne à autonomie réduite">Aide à la personne à autonomie réduite (Mobilité, Toilette)</option>
+                  <option value="Aide-Soignant &amp; Paramédical">Aide-Soignant &amp; Intervenant Paramédical</option>
                   <option value="Garde-Malade 24h">Garde-Malade (24h/24)</option>
                   <option value="Garde-Malade Journée/Nuit">Garde Journée / Nuit</option>
-                  <option value="Aide Autonomie Réduite">Aide à la personne à autonomie réduite</option>
-                  <option value="Aide-Soignant &amp; Paramédical">Aide-Soignant &amp; Paramédical</option>
-                  <option value="Injections &amp; Pansements">Injections &amp; Pansements</option>
-                  <option value="Suivi Post-Opératoire">Suivi Post-Opératoire</option>
+                  <option value="Injections &amp; Pansements">Injections &amp; Pansements à domicile</option>
+                  <option value="Suivi Post-Opératoire">Suivi Chirurgical / Post-Opératoire</option>
+                  <option value="Soins Mère &amp; Nouveau-né">Soins Mère &amp; Nouveau-né</option>
                   <option value="Kinésithérapie">Kinésithérapie à domicile</option>
+                  <option value="Autre Soin">Autre besoin de soin</option>
                 </select>
               </div>
 
               <div class="form-group full-width">
-                <label for="client-details">Précisions médicales ou besoin particulier</label>
-                <textarea id="client-details" name="details" rows="3" placeholder="Décrivez succinctement la situation..."></textarea>
+                <label for="client-details">Précisions sur le besoin (Autonomie, hygiène, constantes...)</label>
+                <textarea id="client-details" name="details" rows="3" placeholder="ex: Aide aux déplacements/toilette pour autonomie réduite, ou accompagnement aide-soignant..."></textarea>
               </div>
             </div>
 

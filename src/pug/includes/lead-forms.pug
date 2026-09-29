@@ -53,10 +53,10 @@
             label(for="client-servicetype", data-i18n="labelServiceType") Type de Soin Souhaité *
             select#client-servicetype(name="serviceType", required)
               option(value="") -- Choisir la prestation --
+              option(value="Aide à la personne à autonomie réduite") Aide à la personne à autonomie réduite (Mobilité, Toilette)
+              option(value="Aide-Soignant & Paramédical") Aide-Soignant & Intervenant Paramédical
               option(value="Garde-Malade 24h") Garde-Malade Présence Continue (24h/24)
               option(value="Garde-Malade Journée/Nuit") Garde-Malade Journée ou Nuit
-              option(value="Aide Autonomie Réduite") Aide à la personne à autonomie réduite
-              option(value="Aide-Soignant & Paramédical") Aide-Soignant & Paramédical
               option(value="Injections & Pansements") Injections & Pansements à domicile
               option(value="Suivi Post-Opératoire") Suivi Chirurgical / Post-Opératoire
               option(value="Soins Mère et Bébé") Soins Mère & Nouveau-né
@@ -72,8 +72,8 @@
               option(value="Planification future") Réservation future
 
           .form-group.full-width
-            label(for="client-details", data-i18n="labelDetails") Précisions médicales ou besoins particuliers (Optionnel)
-            textarea#client-details(name="details", rows="3", placeholder="ex: Patient âgé de 78 ans nécessitant aide à la mobilité et prise de constante...")
+            label(for="client-details", data-i18n="labelDetails") Précisions sur le besoin (Autonomie, soins, hygiène, constantes...)
+            textarea#client-details(name="details", rows="3", placeholder="ex: Aide à la mobilité/toilette pour personne à autonomie réduite, ou soins d'aide-soignant diplômé...")
 
         .form-footer
           button.btn.btn-primary.btn-block.btn-submit(type="submit")

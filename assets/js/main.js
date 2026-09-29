@@ -195,6 +195,25 @@ function initNetlifyFormHandler() {
       e.preventDefault();
       const formData = new FormData(form);
 
+      // Extract details for WhatsApp direct link
+      const fullName = formData.get('fullName') || '';
+      const phone = formData.get('phone') || '';
+      const city = formData.get('city') || '';
+      const serviceType = formData.get('serviceType') || formData.get('profession') || 'Soin';
+      const details = formData.get('details') || formData.get('bio') || '';
+
+      const waMsg = encodeURIComponent(
+        `Bonjour Mes soins, je viens de déposer une demande pour: ${serviceType} (${city}).\n` +
+        `Nom: ${fullName}\n` +
+        `Tél: ${phone}\n` +
+        (details ? `Précisions: ${details}` : '')
+      );
+
+      const waBtn = document.getElementById('whatsapp-direct-link');
+      if (waBtn) {
+        waBtn.href = `https://wa.me/212600000000?text=${waMsg}`;
+      }
+
       try {
         await fetch('/', {
           method: 'POST',
