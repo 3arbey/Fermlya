@@ -251,9 +251,36 @@ function initMobileNav() {
   const toggleBtn = document.getElementById('mobile-toggle');
   const mainNav = document.getElementById('main-nav');
   if (toggleBtn && mainNav) {
-    toggleBtn.addEventListener('click', () => {
-      const isVisible = mainNav.style.display === 'flex';
-      mainNav.style.display = isVisible ? 'none' : 'flex';
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isVisible = mainNav.classList.contains('mobile-open');
+      if (isVisible) {
+        mainNav.classList.remove('mobile-open');
+        mainNav.style.display = 'none';
+      } else {
+        mainNav.classList.add('mobile-open');
+        mainNav.style.display = 'flex';
+      }
+    });
+
+    // Close menu when a link is clicked
+    mainNav.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          mainNav.classList.remove('mobile-open');
+          mainNav.style.display = 'none';
+        }
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768 && mainNav.classList.contains('mobile-open')) {
+        if (!mainNav.contains(e.target) && !toggleBtn.contains(e.target)) {
+          mainNav.classList.remove('mobile-open');
+          mainNav.style.display = 'none';
+        }
+      }
     });
   }
 }
