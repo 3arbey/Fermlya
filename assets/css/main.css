@@ -633,19 +633,193 @@ a {
   border: none;
   cursor: pointer;
   flex-direction: column;
-  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  transition: background 0.15s ease;
+}
+.mobile-toggle:hover, .mobile-toggle:focus {
+  background: var(--border);
 }
 .hamburger-bar {
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: var(--foreground);
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
-  .main-nav { display: none; }
-  .mobile-toggle { display: flex; }
-  .form-grid { grid-template-columns: 1fr; }
-  .form-group.full-width { grid-column: span 1; }
+  .header-container {
+    position: relative;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 1rem;
+    right: 1rem;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    padding: 1.25rem;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+  }
+  [dir="rtl"] .main-nav {
+    left: 1rem;
+    right: 1rem;
+  }
+  .main-nav .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .main-nav .nav-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-md);
+    color: var(--foreground);
+    transition: background 0.15s ease;
+  }
+  .main-nav .nav-link:hover, .main-nav .nav-link:active {
+    background: var(--background);
+    color: var(--primary);
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  /* Responsive Section Padding */
+  .hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .services-section, .pricing-section, .how-it-works-section, .pathways-section, .trust-safety-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  /* Hero Adjustments on Mobile */
+  .hero-title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+    line-height: 1.25;
+  }
+  .hero-subtitle {
+    font-size: 0.975rem;
+    line-height: 1.5;
+  }
+  .hero-cta-row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-row .btn {
+    width: 100%;
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+
+  /* Services Grid on Mobile */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .service-card {
+    padding: 1.25rem;
+  }
+
+  /* Pricing Cards on Mobile */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .pricing-card {
+    padding: 1.25rem;
+  }
+
+  /* Form & Modal Touch Controls */
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS Safari */
+    min-height: 44px;
+    padding: 0.625rem 0.875rem;
+  }
+  .form-group textarea {
+    min-height: 90px;
+  }
+
+  /* Modal Container on Mobile Screens */
+  .modal-overlay {
+    padding: 0.5rem;
+    align-items: flex-end; /* Sheet animation feel */
+  }
+  .modal-container {
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    max-height: 92vh;
+    border-bottom: none;
+  }
+  .modal-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  [dir="rtl"] .modal-close-btn {
+    right: auto;
+    left: 0.75rem;
+  }
+
+  /* Banner CTA on Mobile */
+  .banner-btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .banner-btn-group .btn {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Footer Links on Mobile */
+  .footer-flex {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .seo-tags-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .brand-title {
+    font-size: 1rem;
+  }
+  .btn-lg, .btn {
+    padding: 0.625rem 0.875rem;
+  }
 }
 
 /* ==========================================================================
